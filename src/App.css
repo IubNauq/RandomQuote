@@ -1,38 +1,84 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .App {
-  text-align: center;
+    font-family: "Sitka Text", sans-serif;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 25% 50% 25%;
+    transition: 1s ease-in;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.quote-box {
+    background-color: white;
+    width: 40rem;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding: 3rem;
+    border-radius: 10px;
+    vertical-align: baseline;
+    display: table;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.quote {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    transition: 1s ease-in;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.author {
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: flex-end;
+    transition: 1s ease-in;
 }
 
-.App-link {
-  color: #61dafb;
+a {
+    background-color: cornflowerblue;
+    color: white;
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+
+    margin-top: 1rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    padding: 8px;
+    border-radius: 10px;
+    vertical-align: baseline;
+    transition: 1s ease-in;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.new-quote {
+    background-color: cornflowerblue;
+    color: white;
+    width: 8rem;
+    height: 3rem;
+    font-size: 1rem;
+    text-align: center;
+
+    margin-top: 1rem;
+    padding: 0;
+    border-radius: 10px;
+    vertical-align: baseline;
+    float: right;
+
+    border: none;
+    transition: 1s ease-in;
+}
+
+.buttons {
+    margin-top: 1rem;
+}
+
+a:hover, .new-quote:hover {
+    opacity: 0.8;
 }
