@@ -7,22 +7,28 @@
 .App {
     font-family: "Sitka Text", sans-serif;
     display: grid;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 25% 50% 25%;
+    grid-template-columns: 20vw 60vw 20vw;
+    grid-template-rows: 25vh 50vh 25vh;
     transition: 1s ease-in;
+    overflow: hidden;
+    place-items: center;
 }
 
 .quote-box {
     background-color: white;
     width: 40rem;
+    height: fit-content;
     grid-column: 2/3;
     grid-row: 2/3;
     padding: 3rem;
     border-radius: 10px;
     vertical-align: baseline;
-    display: table;
+
+    /*block-size: fit-content;*/
+    /*display: table;*/
+    /*overflow: unset;*/
 }
 
 .quote {
@@ -47,14 +53,17 @@ a {
     height: 3rem;
     display: inline-block;
 
-    margin-top: 1rem;
+    padding: 0.5rem;
     margin-right: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
-    padding: 8px;
     border-radius: 10px;
-    vertical-align: baseline;
-    transition: 1s ease-in;
+    transition: opacity 0.5s, background-color 1s ease-in;
+    cursor: pointer;
+}
+
+a > i {
+    vertical-align: middle;
 }
 
 .new-quote {
@@ -65,14 +74,13 @@ a {
     font-size: 1rem;
     text-align: center;
 
-    margin-top: 1rem;
-    padding: 0;
     border-radius: 10px;
-    vertical-align: baseline;
     float: right;
 
     border: none;
-    transition: 1s ease-in;
+    transition: opacity 0.5s, background-color 1s ease-in;
+    cursor: pointer;
+    font-family: "Sitka Text",sans-serif;
 }
 
 .buttons {
@@ -80,5 +88,5 @@ a {
 }
 
 a:hover, .new-quote:hover {
-    opacity: 0.8;
+    opacity: 0.5;
 }
